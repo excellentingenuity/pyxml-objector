@@ -1,3 +1,14 @@
+#!/usr/bin/env python
+
+import log
+
+"""
+Created on 2013-08-27
+ 
+@author: James Johnson
+@copyright: ExcellentInGenuity LLC
+@name: Element Object for XML elements
+@license: 
 Copyright (c) 2013, James Johnson - Excellent InGenuity LLC
 All rights reserved.
 
@@ -25,3 +36,27 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+http://excellentingenuity.com
+"""
+class Elemobj:
+
+	def __init__(self, name='', text='', attributes='', children=[]):
+		self.myversion = '1.0.0b'
+		self.mylog = log.Log()
+		self.name = name
+		self.text = text
+		self.attributes = attributes
+		self.children = children
+
+	def set_name(self, aname):
+		if aname != '' or None:
+			self.name = aname
+
+	def get_name(self):
+		return self.name
+
+	def add_atrribute(self, aname, avalue):
+		if aname != '' or None:
+			if avalue != '' or None:
+				self.attributes.update({aname:avalue})
+
