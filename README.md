@@ -16,21 +16,21 @@ Usage instructions:
 
 Include parse.xml in your python file and instantiate a new parse object:
 
-		<code>import parse.py</code>
+		'import parse.py
 		
-		<code>parser = parse.Parse()</code>
+		parser = parse.Parse()'
 
 	Now use your new parse object:
 
-		<code>parser.set_file('xml.xml')</code>
-		<code>parser.parse()</code>
+		'parser.set_file('xml.xml')
+		parser.parse()'
 
 	After running the parse command you can access the elemobj object via
 
-		<code>myobj = parser.data</code>
+		'myobj = parser.data'
 
 
 Intended Updates:
-	#1 Streamline parse object creation, parsing, and return of elemobj to a single command.
-	#2 Update elemobj to be more self-aware and itterable.
+	1. Streamline parse object creation, parsing, and return of elemobj to a single command.
+	2. Update elemobj to be more self-aware and itterable.
 	#3 Add tests for the elmeobj
