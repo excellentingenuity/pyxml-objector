@@ -36,11 +36,11 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-http://excellentingenuity.com
-"""
+ http://excellentingenuity.com
+ """
 class Elemobj:
 
-	def __init__(self, name='', text='', attributes='', children=[]):
+	def __init__(self, name='', text='', attributes={}, children=[]):
 		self.myversion = '1.0.0b'
 		self.mylog = log.Log()
 		self.name = name
@@ -55,7 +55,7 @@ class Elemobj:
 	def get_name(self):
 		return self.name
 
-	def add_atrribute(self, aname, avalue):
+	def add_attribute(self, aname, avalue):
 		if aname != '' or None:
 			if avalue != '' or None:
 				self.attributes.update({aname:avalue})
